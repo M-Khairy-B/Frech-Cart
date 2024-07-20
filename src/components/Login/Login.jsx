@@ -34,7 +34,7 @@ export default function Login() {
 
     let validationSchema = yup.object().shape({
         email: yup.string().email("email is invalid").required("Email is required"),
-        password: yup.string().matches(/^(?=.*[a-zA-Z])(?=.*\d{1,4})[a-zA-Z\d]{8,12}$/, "Password must start with an uppercase letter and be 6-14 characters long").required("password is required"),
+        password: yup.string().matches(/^(?=.*[a-zA-Z])(?=.*\d{1,4})[a-zA-Z\d]{8,12}$/, "Password must start with an uppercase letter and be 6-14 characters long").required("Password is required"),
     });
 
     let formik = useFormik({
@@ -127,7 +127,7 @@ export default function Login() {
                                 </div>
                                 <div className="flex justify-between">
                                     <Link to={'/Register'} className="font-semibold text-sm text-black">Create a new account</Link>
-                                    <Link to={'/ForgotPasswords'} className="font-semibold text-sm text-black">forgot Passwords </Link>
+                                    <Link to={'/ForgotPasswords'} className="font-semibold text-sm text-black">Forget Passwords </Link>
                                 </div>
                             </div>
                         </form>
